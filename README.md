@@ -1,59 +1,47 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <a href="https://github.com/WisnuIbnu/E-Commerce-pemweb-uap">
+    <h1 align="center" style="color: #4B47FF">E-Commerce UAP</h1>
+  </a>
 </p>
 
-## About Laravel
+This repository is Laravel 12 with the auth starter kit Laravel Breeze and a provided Database Structure. Your task is to submit a Pull Request with your team's version of implementing the task, and your PR will be reviewed by the practicum assistant.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# Getting Started
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Task Explanation
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+You need to create a simple CRUD E-Commerce interface with several pages:
 
-## Learning Laravel
+1. **Homepage:**
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## DB Structure
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## Prerequisites
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+You will need the following to run project:
 
-### Premium Partners
+-   PHP >= 8.3
+-   Composer
+-   NPM
+-   Database server (MySQL, MariaDB, PostgreSQL, or SQLite)
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## Installation
 
-## Contributing
+The following steps will guide you through the installation process for running in a development environment locally on your machine:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. Clone the latest version from the repository
+2. Run `composer install` to install the required PHP dependencies
+3. Copy the .env.example file to .env and edit the database credentials according to your database server
+4. Run `php artisan key:generate` to generate a new application key
+5. Run `php artisan migrate` to create the database tables. You can also add the `--seed` flag to seed the database with some dummy data
+6. Run `php artisan serve` to start the development server
+7. Open another terminal and run `npm install && npm run build` to install the required node modules
+8. Run `npm run dev` to compile the assets for development
+9. Open your browser and go to `http://localhost:8000` to view the application
 
-## Code of Conduct
+## Submitting Assignment:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1. Fork the repository with the name "e-commerce-group-x"
+2. Complete the assignment tasks as specified.
+3. Create a pull request to our repository's main branch with your changes.
