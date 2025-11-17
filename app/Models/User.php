@@ -22,6 +22,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role',
     ];
 
     /**
@@ -47,6 +48,22 @@ class User extends Authenticatable
         ];
     }
 
+    // Helper methods
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
+    }
+
+    public function isMember()
+    {
+        return $this->role === 'member';
+    }
+    
+    // Cek apakah user adalah seller (punya store yang verified)
+    public function isSeller()
+    {
+        return $this->store()->exists() && $this->store->is_verified;
+    }
     // relationships can hava one store 
     public function store()
     {
