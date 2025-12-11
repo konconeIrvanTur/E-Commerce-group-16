@@ -259,10 +259,6 @@
         <!-- Sidebar -->
         <aside class="seller-sidebar">
             <div class="store-header">
-                <img 
-                    src="{{ $store->logo ? asset('storage/' . $store->logo) : asset('images/default-store.png') }}" 
-                    alt="{{ $store->name }}"
-                    class="store-logo">
                 <div class="store-name">{{ $store->name }}</div>
                 <div class="store-status">
                     @if($store->is_verified)
