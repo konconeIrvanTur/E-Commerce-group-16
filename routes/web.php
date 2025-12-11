@@ -56,8 +56,19 @@ Route::middleware(['auth'])->group(function () {
 Route::middleware(['auth'])->group(function () {
     // Dashboard
     Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->middleware(['verified'])->name('dashboard');
+        // Redirect based on role
+        if (Auth::user()->isAdmin()) {
+            return redirect()->route('admin.dashboard');
+        }
+
+        // Check if user has a verified store
+        if (Auth::user()->store && Auth::user()->store->is_verified) {
+            return redirect()->route('seller.dashboard');
+        }
+
+        // Regular customer - redirect to home
+        return redirect()->route('home');
+    })->middleware(['auth', 'verified'])->name('dashboard');
 
     // Profile Management
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

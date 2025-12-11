@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Customer;
 use App\Http\Controllers\Controller;
 use App\Models\Transaction;
 use App\Models\Buyer;
+use App\Models\StoreBalance;
+use App\Models\StoreBalanceHistory; 
 use Illuminate\Http\Request;
 
 class TransactionController extends Controller
@@ -74,7 +76,7 @@ class TransactionController extends Controller
         StoreBalanceHistory::create([
             'store_balance_id' => $storeBalance->id,
             'type' => 'income',
-            'reference_id' => $transaction->id,
+            'reference_id' => (string)$transaction->id,
             'reference_type' => 'transaction',
             'amount' => $transaction->grand_total,
             'remarks' => 'Payment from transaction ' . $transaction->code,

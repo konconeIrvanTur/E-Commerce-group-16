@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('store_balance_id')->constrained()->cascadeOnDelete();
             $table->enum('type', ['income', 'withdraw']);
-            $table->uuid('reference_id');
+            $table->unsignedBigInteger('reference_id');
             $table->string('reference_type');
             $table->decimal('amount', 26, 2);
             $table->string('remarks');
